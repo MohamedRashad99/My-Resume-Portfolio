@@ -27,15 +27,15 @@ class SideMenu extends StatelessWidget {
                   children: [
                     AreaInfoText(
                       title: "Residence",
-                      text: "Bangladesg",
+                      text: "Egypt",
                     ),
                     AreaInfoText(
                       title: "City",
-                      text: "Dhaka",
+                      text: "Mansoura",
                     ),
                     AreaInfoText(
                       title: "Age",
-                      text: "22",
+                      text: "25",
                     ),
                     Skills(),
                     SizedBox(height: defaultPadding),
@@ -74,7 +74,9 @@ class SideMenu extends StatelessWidget {
                             icon: SvgPicture.asset("assets/icons/linkedin.svg"),
                           ),
                           IconButton(
-                            onPressed: () {},
+                            onPressed: () {
+
+                            },
                             icon: SvgPicture.asset("assets/icons/github.svg"),
                           ),
                           IconButton(

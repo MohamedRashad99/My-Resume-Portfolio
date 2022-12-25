@@ -22,7 +22,7 @@ class HighLightsInfo extends StatelessWidget {
                   children: [
                     HeighLight(
                       counter: AnimatedCounter(
-                        value: 119,
+                        value: 26,
                         text: "K+",
                       ),
                       label: "Subscribers",
@@ -38,11 +38,11 @@ class HighLightsInfo extends StatelessWidget {
                 ),
                 const SizedBox(height: defaultPadding),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     HeighLight(
                       counter: AnimatedCounter(
-                        value: 30,
+                        value: 130,
                         text: "+",
                       ),
                       label: "GitHub Projects",
@@ -52,18 +52,18 @@ class HighLightsInfo extends StatelessWidget {
                         value: 13,
                         text: "K+",
                       ),
-                      label: "Stars",
+                      label: "Commits",
                     ),
                   ],
                 ),
               ],
             )
           : Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 HeighLight(
                   counter: AnimatedCounter(
-                    value: 119,
+                    value: 26,
                     text: "K+",
                   ),
                   label: "Subscribers",
@@ -77,7 +77,7 @@ class HighLightsInfo extends StatelessWidget {
                 ),
                 HeighLight(
                   counter: AnimatedCounter(
-                    value: 30,
+                    value: 130,
                     text: "+",
                   ),
                   label: "GitHub Projects",
@@ -87,7 +87,7 @@ class HighLightsInfo extends StatelessWidget {
                     value: 13,
                     text: "K+",
                   ),
-                  label: "Stars",
+                  label: "Commits",
                 ),
               ],
             ),
