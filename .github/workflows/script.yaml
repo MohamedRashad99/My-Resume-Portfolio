@@ -1,55 +1,24 @@
-#name: Deploy
-#
-#on:
-#  push:
-#    branches:
-#      - master
-#
-#jobs:
-#  build:
-#    runs-on: ubuntu-latest
-#    steps:
-#      # Checkout the repository
-#      - uses: actions/checkout@v2
-#
-#      # Install Flutter
-#      - uses: subosito/flutter-action@v1
-#        with:
-#          channel: stable
-#      - run: flutter pub get
-#
-#      # Build the Flutter web app
-#      - run: flutter build web
-#
-#      # Set the name of the artifact to be uploaded
-#      - run: echo "web-build.zip" > artifact_name.txt
-#
-#          # Zip the build output
-#          - run: zip -r $(cat artifact_name.txt) build/web
-#
-#          # Upload the artifact
-#          - uses: actions/upload-artifact@v2
-#            with:
-#              name: web-build
-#              path: $(cat artifact_name.txt)
-#
-#    deploy:
-#      needs: build
-#      runs-on: ubuntu-latest
-#      steps:
-#        # Checkout the repository
-#        - uses: actions/checkout@v2
-#
-#        # Download the build artifact
-#        - uses: actions/download-artifact@v2
-#          with:
-#            name: web-build
-#
-#        # Unzip the artifact
-#        - run: unzip web-build.zip
-#
-#        # Install the gh-pages package
-#        - run: npm install -g gh-pages
-#
-#        # Deploy the build output to Github Pages
-#        - run: gh-pages -d build/web
+name: Deploy
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout the repository
+      - uses: actions/checkout@v2
+
+      # Install Flutter
+      - uses: subosito/flutter-action@v1
+        with:
+          channel: stable
+      - run: flutter pub get
+
+
+      # Set the name of the artifact to be uploaded
+      - name: Deploy Flutter web app to github pages (removing large assets/NOTICES file)
+        uses: AlienKevin/flutter-gh-pages@v11
