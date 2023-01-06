@@ -1,24 +1,14 @@
-name: Deploy
+name: Gh-Pages
 
 on:
   push:
-    branches:
-      - master
+    branches: [ master ]
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-      # Checkout the repository
-      - uses: actions/checkout@v2
-
-      # Install Flutter
+      - uses: actions/checkout@v2 # Only works with v2
       - uses: subosito/flutter-action@v1
-        with:
-          channel: stable
-      - run: flutter pub get
-
-
-      # Set the name of the artifact to be uploaded
-      - name: Deploy Flutter web app to github pages (removing large assets/NOTICES file)
-        uses: AlienKevin/flutter-gh-pages@v11
+      - uses: bluefireteam/flutter-gh-pages@v7
