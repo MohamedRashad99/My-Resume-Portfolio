@@ -33,11 +33,25 @@ List<Project> demo_projects = [
   Project(
     title: "E-Commerce Complete App - Flutter",
     description:
-        "In the first part of our complete e-commerce app, we show you how you can create a nice clean onboarding screen for your e-commerce app that can run both Andriod and iOS devices because it builds with flutter. Then on the second episode, we build a Sign in, Forgot Password screen with a custom error indicator Flutter by Googl Firebase RealTime db, Firebase DataBase, Provider stagemanagement, Localization en , ar,Auth google email and password,Make order, cart , filtered by category , admin,Animation.",
+        "We show you how you can create a nice clean onboarding screen for your e-commerce app that can run both Andriod and iOS devices because it builds with flutter. Then on the second episode, we build a Sign in, Forgot Password screen with a custom error indicator Flutter by Googl Firebase RealTime db, Firebase DataBase, Provider stagemanagement, Localization en , ar,Auth google email and password,Make order, cart , filtered by category , admin,Animation.",
   ),
   Project(
     title: "Gadha Driver - User - Provider app  ",
     description:
         "In the first part of our complete e-commerce app, we show you how you can create receive Orders only in KSA. Then on the second episode, we build a Sign in, Forgot Password screen with a custom error indicator.",
   ),
+];
+
+
+List<String> demo_projects_urls = [
+  "https://drive.google.com/file/d/1SQxqQMLq1zSbq8RWBPztGkWfIqgn4ucW/view?usp=share_link",
+  "https://play.google.com/store/apps/details?id=com.cptit.tal3thoom",
+  "https://play.google.com/store/apps/details?id=com.elmanhg_app",
+  "https://play.google.com/store/apps/details?id=com.kw4s.jeetmandob",
+  "https://play.google.com/store/apps/details?id=com.jawdaacademy.elgawda",
+  "https://play.google.com/store/apps/details?id=com.ahmadalmosawi.app",
+  "https://drive.google.com/drive/folders/1PS85vI1FDfnDLeoXOerQjV5vndxvddrI?usp=share_link",
+  "https://drive.google.com/file/d/1QNGHw-v2EQUYBKpEPPDIOBK0mhScLJpr/view?usp=share_link"
+
+
 ];

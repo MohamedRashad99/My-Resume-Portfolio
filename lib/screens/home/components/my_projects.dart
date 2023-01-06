@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_profile/models/Project.dart';
 import 'package:flutter_profile/responsive.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../../constants.dart';
 import 'project_card.dart';
@@ -58,7 +59,20 @@ class ProjectsGridView extends StatelessWidget {
       ),
       itemBuilder: (context, index) => ProjectCard(
         project: demo_projects[index],
+        onPressed: ()async {
+        await openUrl(demo_projects_urls[index]);
+
+
+        },
       ),
     );
   }
+
+  Future<void> openUrl(String url) async {
+    final _url = Uri.parse(url);
+    if (!await launchUrl(_url, mode: LaunchMode.externalApplication)) { // <--
+      throw Exception('Could not launch $_url');
+    }
+  }
+
 }

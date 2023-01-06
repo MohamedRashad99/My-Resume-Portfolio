@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_profile/constants.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import 'area_info_text.dart';
 import 'coding.dart';
@@ -70,17 +71,30 @@ class SideMenu extends StatelessWidget {
                         children: [
                           Spacer(),
                           IconButton(
-                            onPressed: () {},
+                            onPressed: () async{
+                              await openUrl("https://www.linkedin.com/in/mohamed-elsabagh-9722b8156/");
+
+                            },
                             icon: SvgPicture.asset("assets/icons/linkedin.svg"),
                           ),
                           IconButton(
-                            onPressed: () {
+                            onPressed: () async{
+
+
+                              await openUrl("https://github.com/MohamedRashad99");
+
 
                             },
                             icon: SvgPicture.asset("assets/icons/github.svg"),
                           ),
                           IconButton(
-                            onPressed: () {},
+                            onPressed: () async{
+
+                              await openUrl("https://twitter.com/Ra4ad_");
+
+
+
+                            },
                             icon: SvgPicture.asset("assets/icons/twitter.svg"),
                           ),
                           Spacer(),
@@ -95,5 +109,12 @@ class SideMenu extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  Future<void> openUrl(String url) async {
+    final _url = Uri.parse(url);
+    if (!await launchUrl(_url, mode: LaunchMode.externalApplication)) { // <--
+      throw Exception('Could not launch $_url');
+    }
   }
 }
