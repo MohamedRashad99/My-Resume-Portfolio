@@ -2,7 +2,7 @@
     package="com.example.flutter_profile">
    <application
         android:label="CV-M.Rashad"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/cv">
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
