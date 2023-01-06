@@ -16,7 +16,6 @@ jobs:
         run: flutter build web
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@3.7.1
-        env:
-#           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          BRANCH: gh-pages
-          FOLDER: build/web
+        with:
+          branch: gh-pages
+          folder: build/web
